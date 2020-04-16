@@ -15,7 +15,7 @@ adminschema.methods.addtoken =  function()
   
     try{
         const user = this
-        const token =  jwt.sign({id:user._id}, 'securitywebtokencovid19')
+        const token =  jwt.sign({id:user._id}, process.env.TOKENKEY)
         return token
     }catch(e)
     {
