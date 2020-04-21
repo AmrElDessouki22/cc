@@ -2,6 +2,9 @@ const express = require('express')
 const app = new express.Router()
 const news = require('../DB/Model/News')
 const auth = require('../Middleware/authadmin')
+var parseString = require('xml2js').parseString;
+const fetch = require('node-fetch');
+var xml2js = require('xml2js');
 
 app.post('/addnewnews',auth,async(req,res)=>
 {
@@ -60,11 +63,21 @@ app.get('/news',async(req,res)=>
 {
     try
 {
-    const all_news = await news.find({})
-    res.status(200).send(all_news)
+    //const all_news = await news.find({})
+    //res.status(200).send(all_news)
+    const all_news = await fetch('https://rss.app/feeds/tLrqiR8fTZoTQwBD.xml')
+    xml2js.parseStringPromise(await all_news.text()).then(function (result) {
+        res.status(200).send(result)
+      })
+      .catch(function (err) {
+        res.status(200).send(err.message)
+      });
+
+
+
 }catch(e)
 {
-    res.status(400).send(e)
+    res.status(400).send(e.message)
 }
 
 })

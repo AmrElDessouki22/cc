@@ -11,14 +11,14 @@ const auth = async (req,res,next)=>
     const admin_search = await admin.findById({_id:decode.id})
     if(!admin_search)
     {
-        return new Error('sesion expire')
+       return req.admin = undefined
     }
     req.admin = admin_search
     req.token = token
  
     }catch(e)
     {
-        return new Error('this request Authorize ')
+        return new Error('this request Unauthorize ')
     }
     next()
 

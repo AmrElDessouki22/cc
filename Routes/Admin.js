@@ -21,12 +21,31 @@ app.post('/adminlogin',async (req,res)=>
         const token = await addadmin.addtoken()
         addadmin.tokens = await addadmin.tokens.concat({token})
         await addadmin.save()
+        res.cookie('token',token)
         res.status(201).send(addadmin)
     }catch(e)
     {
         res.status(400).send(e)
     }
 })
+app.get('/checkadmin',auth,async (req,res)=>
+{
+    try{
+        if(req.admin==undefined)
+        {
+           return res.status(200).send(e)
+        }
+           return res.status(400).send(e)
+    }catch(e)
+    {
+        res.status(400).send(e)
+    }
+},(error,res,next)=>
+{
+    res.status(400).send(error.message)
+
+})
+
 app.get('/alladmin',auth,async (req,res)=>
 {
     try{

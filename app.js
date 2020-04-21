@@ -13,7 +13,10 @@ app.use(express.json())
 
 app.set('view engine','hbs')
 app.set('views',template)
-
+app.get('/dashboard',(req,res)=>
+{
+    res.render('dashboard')
+})
 app.use(adminroute)
 app.use(statistics)
 app.use(Nearbyhospital)
