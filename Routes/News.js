@@ -9,16 +9,13 @@ var xml2js = require('xml2js');
 app.post('/addnewnews',auth,async(req,res)=>
 {
     try{
-        await news(req.body).save()
-        res.status(200).send('add succusfuly')
+        const admin = await news(req.body).save()
+        res.status(200).send('add succusfuly '+admin)
     }catch(e)
     {
         res.status(404).send(' faild to add')
 
     }
-
-
-
 })
 app.patch('/updatenews/:id',auth,async(req,res)=>
 {

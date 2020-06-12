@@ -30,9 +30,12 @@ const auth = async (req,res,next)=>
         }
         
     }
-    req.admin = undefined
-    req.token = undefined
-    next()
+    if(admin_search.length == 0)
+    {
+        req.admin = undefined
+        req.token = undefined
+        next()
+    }
     
  
     }catch(e)
