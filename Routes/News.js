@@ -24,6 +24,8 @@ app.patch('/updatenews/:id',auth,async(req,res)=>
 {
     try
     {
+        console.log(req.body);
+        
         const find = await news.findById(req.params.id)
         const keys = Object.keys(req.body)
         const real_key = ['title','description','image_link','resource']
@@ -42,7 +44,9 @@ app.patch('/updatenews/:id',auth,async(req,res)=>
 
     }catch(e)
     {
-        res.status(400).send('some thing going wrong')
+        console.log(e.message);
+        
+        res.status(400).send(e.message)
 
     }
 })

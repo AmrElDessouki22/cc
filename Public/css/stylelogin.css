@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.89), rgba(255, 255, 255, 0.80)),url("../img/background.png");
+}
+.first
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.first img {
+    margin: 5px auto;
+    width:20%;
+    justify-content: center;
+    background-color: red;
+    border-radius: 50%;
+}
+.third
+{
+    display: flex;
+
+    justify-content: center;
+width: 100%;
+}
+.sec{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+.third input[type=password]
+{
+    background-color: #a71930 ;
+    width: 30%;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 4%;
+    border: 2px solid #a71930;
+    
+}
+.sec input[type=email]
+{
+    background-color: #a71930 ;
+    width: 30%;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 4%;
+    border: 2px solid #a71930;
+    margin: 15px;
+}
+.fourth{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.fourth input[type='button']
+{
+    width: 10%;
+    height: 50px;
+    border-radius: 4%;
+    background-color: #a71930;
+    border: 2px solid #a71930;
+    color: white;
+    margin: 20px;
+}
+.fourth input[type='button']:hover
+{
+    
+    width: 11%;
+    height: 50px;
+    border-radius: 4%;
+    background-color: white ;
+    border: 2px solid white;
+    color: #a71930;
+}
+.sec input[type=email]::placeholder
+    {
+        color:whitesmoke;
+        padding-left: 3px;
+    }
+    .third input[type=password]::placeholder
+    {
+        padding-left: 3px;
+
+        color:whitesmoke;
+    }
+@media only screen and (min-width: 200px) and (max-width: 900px) 
+ {
+    .first img{
+        width: 50%;
+        margin-top: 20px;
+    }
+    .sec input[type=email]
+    {
+        width: 50%;
+        height: 40px;
+    }
+    
+    .third input[type=password]{
+        width: 50%;
+        height: 40px;
+    }
+    .fourth input[type='button']
+    {
+    width: 20%;
+    height: 50px;
+    
+    }
+    .fourth input[type='button']:hover
+    {   
+    
+    width: 21%;
+    height: 50px;
+   
+    }
+
+    }

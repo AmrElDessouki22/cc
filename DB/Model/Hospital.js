@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const hospital = new Schema({
-    name:{type:String,required:true},
+    name:{type:String},
     location:{lon:{type:String},lat:{type:String}},
     
 },{timestamps:true})

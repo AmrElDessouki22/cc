@@ -7,7 +7,7 @@ const adminschema = new Schema({
     email:{type:String ,unique:true ,required:true},
     password:{type:String,required:true},
     name:{type:String},
-    keyactivate:{type:Boolean , default:false},
+    keyactivate:{type:Boolean , default:true},
     tokens:[{token:{type:String}}]
 },{timestamps:true})
 adminschema.methods.addtoken =  function()
@@ -38,23 +38,17 @@ adminschema.statics.checkuser = async (email,password)=>
     try
     {
         const email_search = await admin.findOne({email:email})
-    
         if(!email_search)
         {
            
             return new Error('cant login')
         }
-        
         const decode_password = await bycript.compare(password,email_search.password)
-
         if(!decode_password)
         {
             
             return new Error('cant login')
-        }
-       
-
-        
+        }        
         return email_search
     }catch(e)
     {

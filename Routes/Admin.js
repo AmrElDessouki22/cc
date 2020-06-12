@@ -9,6 +9,7 @@ app.post('/addnewadmin',async (req,res)=>
         const addadmin = await admin(req.body)
         await addadmin.save()
         res.status(201).send(addadmin)
+        
     }catch(e)
     {
         res.status(400).send(e)
@@ -16,12 +17,12 @@ app.post('/addnewadmin',async (req,res)=>
 })
 app.post('/adminlogin',async (req,res)=>
 {
-    try{
+    try{ 
         const addadmin = await admin.checkuser(req.body.email,req.body.password)
-        const token = await addadmin.addtoken()
+        const token = await addadmin.addtoken()  
         addadmin.tokens = await addadmin.tokens.concat({token})
         await addadmin.save()
-        res.cookie('token',token)
+        res.cookie('token',await addadmin.tokens[0]['token'])
         res.status(201).send(addadmin)
     }catch(e)
     {
@@ -31,14 +32,18 @@ app.post('/adminlogin',async (req,res)=>
 app.get('/checkadmin',auth,async (req,res)=>
 {
     try{
+        
+    
+        
         if(req.admin==undefined)
         {
-           return res.status(200).send(e)
+            return res.status(400).send()
         }
-           return res.status(400).send(e)
+           return res.status(200).send()
     }catch(e)
     {
-        res.status(400).send(e)
+        
+        res.status(400).send(e.message)
     }
 },(error,res,next)=>
 {
@@ -128,9 +133,18 @@ app.delete('/deleteme',auth,async(req,res)=>
         res.status(400).send('something going wrong')
     }
 })
-
-app.get('',(req,res)=>
+app.post('/adminlogout',auth,async(req,res)=>
 {
-    res.render('index')
+    try
+    {
+        req.admin.tokens=[]
+        req.admin.save()
+        res.status(200).send('logout succssefuly')
+    }catch(e)
+    {
+        res.status(400).send('something going wrong')
+    }
 })
+
+
 module.exports = app

@@ -3,10 +3,10 @@ const Schema = mongoose.Schema
 
 
 const NewsSchema = new Schema({
-    title:{type:String,required:true},
-    description:{type:String,required:true},
+    title:{type:String},
+    description:{type:String},
     image_link:{type:String},
-    resource:{type:String,required:true}
+    resource:{type:String}
 },{timestamps:true})
 
 

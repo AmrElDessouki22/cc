@@ -10,7 +10,7 @@ app.post('/addhospital',auth,async (req,res)=>
     try
     {
     const add_hospital = await hospital(req.body)
-    console.log(req.body);
+
     
     await add_hospital.save()
     res.status(200).send('new hospital add succesfuly')
