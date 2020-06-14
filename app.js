@@ -23,7 +23,7 @@ app.use(Nearbyhospital)
 app.use(News)
 app.get('/',(req,res)=>
 {
-    res.render('index.hbs')
+    res.render('publicnews.hbs')
 })
 app.get('/dashboard/login',(req,res)=>
 {

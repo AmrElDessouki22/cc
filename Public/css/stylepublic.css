@@ -1,0 +1,177 @@
+body
+{
+    margin: 0;
+    width: 100%;
+
+
+    
+}
+body section 
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.89), rgba(255, 255, 255, 0.80)),url("../img/background.png");
+
+}
+.continear div .newsdiv{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+.continear div .newsdiv div {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30%;
+    margin: 10px ;
+    padding: 0;
+    background-color: #a71930;
+    border-radius: 10px;
+    
+}
+.continear div .newsdiv div img{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 50%;
+}
+.continear div .newsdiv div h4{
+    text-align: center;
+    color: white;
+    width: 51%;
+    
+
+    
+}
+.continear div .newsdiv div p{
+    text-align: center;
+    font-size: 7px;
+    color: white;
+    width: 51%;
+    
+
+    
+}
+
+.side-menu{
+    width: 15%;
+    padding: 0;
+    background-color: #a71930;
+
+    
+}
+
+.side-menu  img {
+    width: 100%;
+    height: 240px;
+
+}
+li{
+    list-style: none;
+    
+}
+input[type=button]
+{
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer;
+    color: #a71930;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10%;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+}
+input[type=button]:hover
+{
+    color:white;
+    background-color: #a71930;
+   
+}
+ul{
+
+    margin: 0;
+    padding: 1px;
+
+
+}
+.continear
+{
+    width: 85%;
+    justify-content: center;
+}
+.continear div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.continear div h1{
+    text-align: center;
+    color: #a71930;
+    font-size: 50px;
+    width: 100%;
+    margin-bottom:70px;
+    
+}
+.continear div input[type=text]{
+    width: 100%;
+    margin: 5px 30%;
+    font-size: 20px;
+    background-color:#a71930;
+    color:white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    
+}
+
+.continear div input[type=text]::placeholder
+{
+    color:white;
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.buttons input[type=button]{
+    width: 100%;
+    margin: 10px 35%;
+    font-size: 20px;
+    cursor: pointer;
+    background-color:#a71930;
+    color:white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+.buttons input[type=button]:hover{
+    
+    color:#a71930;
+    background-color:white;
+    
+}
+@media only screen and (min-width: 200px) and (max-width: 900px) 
+ {
+    .continear
+    {
+        width: 100%;
+        
+    }
+    .side-menu {
+        width: 100%;
+    }
+
+    }

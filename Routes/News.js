@@ -65,8 +65,8 @@ app.get('/news',async(req,res)=>
     try
 {
     const all_news = await news.find({})
+    
     res.status(200).send(all_news)
-   // const all_news = await fetch('https://rss.app/feeds/tLrqiR8fTZoTQwBD.xml')
    
 
 
