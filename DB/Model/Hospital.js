@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const hospital = new Schema({
     name:{type:String},
+    image_url:{type:String},
     location:{lon:{type:String},lat:{type:String}},
     
 },{timestamps:true})

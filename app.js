@@ -41,5 +41,15 @@ app.get('/dashboard/statistics',(req,res)=>
 {
     res.render('statistics.hbs')
 })
+app.get('/statisticsclient',(req,res)=>
+{
+    res.render('statisticspublic.hbs')
+})
+app.get('/nearhospitalclient',(req,res)=>
+{
+    res.render('nearhospitalpublic.hbs')
+})
+
+
 
 app.listen(process.env.PORT || 3000)

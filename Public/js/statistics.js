@@ -5,6 +5,7 @@ const name = document.getElementById('name')
 const total = document.getElementById('total')
 const hospital = document.getElementById('hospital')
 const death = document.getElementById('death')
+const image = document.getElementById('image')
 const statistics = document.getElementById('statistics')
 statistics.style["background-color"] = '#a71930'
 statistics.style["color"]='white'
@@ -49,7 +50,7 @@ checkuser()
 
 async function addnew()
 {
-    const body = {name:name.value ,recovered:recovered.value ,death:death.value,total:total.value}
+    const body = {name:name.value ,recovered:recovered.value ,death:death.value,total:total.value,image_url:image.value}
     const response = await fetch(url+'addcountry',{
         method:'POST',
         headers:{'Content-Type':'application/json','Authorization':'Bearer '+document.cookie.split('=')[1]},
@@ -82,6 +83,10 @@ function updatebody(){
     if(total.value != '')
     {
         body.total=total.value
+    }
+    if(image.value != '')
+    {
+        body.total=image.value
     }
     if(recovered.value != '')
     {
