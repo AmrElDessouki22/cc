@@ -1,5 +1,5 @@
 const divnews = document.getElementById('statistics')
-const url = 'https://hticovid-19.herokuapp.com'
+const url = 'https://hticovid-19.herokuapp.com/'
 const static = document.getElementById('static')
 const hospital= document.getElementById('hospital')
 const news =document.getElementById('news')
