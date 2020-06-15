@@ -7,7 +7,7 @@ hospital.style["background-color"] = '#a71930'
 hospital.style["color"]='white'
 static.addEventListener('click',staticgo)
 function staticgo(){
-    location.href = '/'
+    location.href='/statisticsclient'
 }
 hospital.addEventListener('click',hospitalgo)
 function hospitalgo(){
@@ -15,7 +15,8 @@ function hospitalgo(){
 }
 news.addEventListener('click',newsgo)
 function newsgo(){
-    location.href='/statisticsclient'
+  
+    location.href = '/'
 }
 getlocation()
 function getlocation()
