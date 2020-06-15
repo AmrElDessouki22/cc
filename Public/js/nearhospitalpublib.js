@@ -46,7 +46,8 @@ async function getnews(lat,long){
 }
 function setdata(data){
     for (let index = 0; index < data.length; index++) {
-        var imageurl = data[index].image_url
+
+    var imageurl = data[index].image_url
         if(imageurl === undefined)
         {
             imageurl = '../img/playstore.png'
