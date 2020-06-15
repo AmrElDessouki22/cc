@@ -20,7 +20,7 @@ function newsgo(){
 }
 getnews()
 async function getnews(){
-    const response = await fetch(url+'statistics',{
+    const response = await fetch(url+'/statistics',{
         method:'GET',
         
     })
