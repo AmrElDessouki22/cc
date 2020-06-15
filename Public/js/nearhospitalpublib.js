@@ -1,5 +1,5 @@
 const divnews = document.getElementById('statistics')
-const url = 'https://hticovid-19.herokuapp.com/'
+const url = 'https://hticovid-19.herokuapp.com'
 const static = document.getElementById('static')
 const hospital= document.getElementById('hospital')
 const news =document.getElementById('news')
@@ -32,7 +32,7 @@ function showPosition(position) {
   }
 
 async function getnews(lat,long){
-    const response = await fetch(url+'getnearbyhospital',{
+    const response = await fetch(url+'/getnearbyhospital',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({lon:long,lat:lat})
