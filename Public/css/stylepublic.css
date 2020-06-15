@@ -41,6 +41,7 @@ body section
 .continear div .newsdiv div img{
     margin-top: 10px;
     border-radius: 10px;
+    height: 40%;
     width: 50%;
 }
 .continear div .newsdiv div h4{
@@ -163,13 +164,14 @@ ul{
     background-color:white;
     
 }
-@media only screen and (min-width: 200px) and (max-width: 900px) 
+@media only screen and (min-width: 200px) and (max-width: 1000px) 
  {
     .continear
     {
         width: 100%;
         
     }
+    
     h4{
         font-size: 7px;
     }
@@ -181,5 +183,11 @@ ul{
         height: 340px;
     
     }
-
+    .continear div .newsdiv div img{
+        margin-top: 10px;
+        border-radius: 10px;
+        width: 50%;
+        height: 40%;
+    }
+   
     }
