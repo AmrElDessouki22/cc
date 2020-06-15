@@ -8,6 +8,7 @@ const hospital = document.getElementById('hospital')
 const statics = document.getElementById('statics')
 hospital.style["background-color"] = '#a71930'
 hospital.style["color"]='white'
+const image = document.getElementById('image')
 const add = document.getElementById('add')
 const update = document.getElementById('update')
 const remove = document.getElementById('remove')
@@ -49,7 +50,7 @@ function staticsgo()
 }
 async function addnew()
 {
-    const body = {name:name.value ,location:{lon:long.value,lat:lat.value}}
+    const body = {name:name.value ,location:{lon:long.value,lat:lat.value},image_url:image.value}
     const response = await fetch(url+'addhospital',{
         method:'POST',
         headers:{'Content-Type':'application/json','Authorization':'Bearer '+document.cookie.split('=')[1]},
@@ -75,6 +76,10 @@ function updatebody(){
     if(name.value != '' )
     {
         body.name = name.value
+    }
+    if(image.value != '' )
+    {
+        body.name = image.value
     }
     if(long.value != '' )
     {
