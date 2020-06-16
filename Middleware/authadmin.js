@@ -21,6 +21,7 @@ const auth = async (req,res,next)=>
             req.admin = admin_search
             req.token = token
             next()
+            break
         }else if(index == admin_search.tokens.length-1 )
         {
             req.admin = undefined

@@ -59,7 +59,7 @@ async function addnew()
         headers:{'Content-Type':'application/json','Authorization':'Bearer '+document.cookie.split('=')[1]},
         body:JSON.stringify(body)
     })
-    if(response.status ==200)
+    if(response.status == 200)
     {
         alert('new post add ')
         imageurl.value=''
