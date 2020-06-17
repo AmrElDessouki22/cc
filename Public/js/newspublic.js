@@ -1,4 +1,10 @@
 const divnews = document.getElementById('newss')
+const apk = document.getElementById('apk')
+apk.addEventListener('click',apk)
+function apk()
+{
+    location.href = 'https://www.mediafire.com/file/fjt75i9xj9igt53/app-release.apk/file'
+}
 const url = 'https://hticovid-19.herokuapp.com'
 const static = document.getElementById('static')
 const hospital= document.getElementById('hospital')
