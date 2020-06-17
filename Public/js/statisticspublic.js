@@ -1,8 +1,8 @@
 const divnews = document.getElementById('statistics')
 const url = 'https://hticovid-19.herokuapp.com'
 const apk = document.getElementById('apk')
-apk.addEventListener('click',apk)
-function apk()
+apk.addEventListener('click',apk_)
+function apk_()
 {
     location.href = 'https://www.mediafire.com/file/fjt75i9xj9igt53/app-release.apk/file'
 }

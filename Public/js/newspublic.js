@@ -1,7 +1,7 @@
 const divnews = document.getElementById('newss')
 const apk = document.getElementById('apk')
-apk.addEventListener('click',apk)
-function apk()
+apk.addEventListener('click',apk_)
+function apk_()
 {
     location.href = 'https://www.mediafire.com/file/fjt75i9xj9igt53/app-release.apk/file'
 }
