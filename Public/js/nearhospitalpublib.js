@@ -5,7 +5,7 @@ const apk = document.getElementById('apk')
 apk.addEventListener('click',apk_)
 function apk_()
 {
-    location.href = 'https://www.mediafire.com/file/fjt75i9xj9igt53/app-release.apk/file'
+    location.href = 'https://www.mediafire.com/file/kakq2no3lowofgj/app-release.apk/file'
 }
 const hospital= document.getElementById('hospital')
 const news =document.getElementById('news')

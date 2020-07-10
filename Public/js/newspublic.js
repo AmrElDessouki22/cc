@@ -3,7 +3,7 @@ const apk = document.getElementById('apk')
 apk.addEventListener('click',apk_)
 function apk_()
 {
-    location.href = 'https://www.mediafire.com/file/fjt75i9xj9igt53/app-release.apk/file'
+    location.href = 'https://www.mediafire.com/file/kakq2no3lowofgj/app-release.apk/file'
 }
 const url = 'https://hticovid-19.herokuapp.com'
 const static = document.getElementById('static')

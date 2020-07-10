@@ -84,7 +84,7 @@ input[type=button]
     width: 100%;
     margin: 10px 0;
     cursor: pointer;
-    color: #324148;
+    color: white;
     padding: 20px;
     background-color: #263238;
     border-radius: 10%;
@@ -95,7 +95,7 @@ input[type=button]
 input[type=button]:hover
 {
     color:white;
-    background-color: #a71930;
+    background-color: #324148;
    
 }
 ul{
