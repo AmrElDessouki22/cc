@@ -9,7 +9,7 @@ function apk_()
 const static = document.getElementById('static')
 const hospital= document.getElementById('hospital')
 const news =document.getElementById('news')
-static.style["background-color"] = '#a71930'
+static.style["background-color"] = '#324148'
 static.style["color"]='white'
 static.addEventListener('click',staticgo)
 function staticgo(){

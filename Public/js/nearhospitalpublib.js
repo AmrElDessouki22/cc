@@ -9,7 +9,7 @@ function apk_()
 }
 const hospital= document.getElementById('hospital')
 const news =document.getElementById('news')
-hospital.style["background-color"] = '#a71930'
+hospital.style["background-color"] = '#324148'
 hospital.style["color"]='white'
 static.addEventListener('click',staticgo)
 function staticgo(){

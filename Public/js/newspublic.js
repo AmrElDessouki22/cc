@@ -9,7 +9,7 @@ const url = 'https://hticovid-19.herokuapp.com'
 const static = document.getElementById('static')
 const hospital= document.getElementById('hospital')
 const news =document.getElementById('news')
-news.style["background-color"] = '#a71930'
+news.style["background-color"] = '#324148'
 news.style["color"]='white'
 static.addEventListener('click',staticgo)
 function staticgo(){
