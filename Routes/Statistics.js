@@ -66,4 +66,18 @@ app.get('/statistics',async(req,res)=>
 
     }
 })
+app.get('/getstatistics/:id',async (req,res)=>
+{
+    try
+    {
+        const all_statistics = await statistics.findById(req.params.id)
+        
+
+        res.status(200).send(all_statistics)
+    }catch(e)
+    {
+        res.status(401).send('failed to get  news')
+    }
+
+})
 module.exports = app

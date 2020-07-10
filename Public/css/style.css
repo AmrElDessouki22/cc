@@ -22,7 +22,7 @@ body section
     display: flex;
     padding: 0;
     flex-wrap: wrap;
-    background-color: #a71930;
+    background-color: #263238;
     justify-content: center;
 
 
@@ -41,9 +41,9 @@ input[type=button]
     width: 100%;
     margin: 10px 0;
     cursor: pointer;
-    color: #a71930;
+    color: white;
     padding: 20px;
-    background-color: white;
+    background-color: #324148;
     border-radius: 10%;
     font-size: 15px;
     font-weight: bolder;
@@ -52,7 +52,7 @@ input[type=button]
 input[type=button]:hover
 {
     color:white;
-    background-color: #a71930;
+    background-color: #324148;
    
 }
 ul{
@@ -72,7 +72,7 @@ ul{
 }
 .continear div h1{
     text-align: center;
-    color: #a71930;
+    color: #263238;
     font-size: 50px;
     width: 100%;
     margin-bottom:70px;
@@ -82,7 +82,7 @@ ul{
     width: 100%;
     margin: 5px 30%;
     font-size: 20px;
-    background-color:#a71930;
+    background-color:#263238;
     color:white;
     border-radius: 10px;
     border: none;
@@ -105,7 +105,7 @@ ul{
     margin: 10px 35%;
     font-size: 20px;
     cursor: pointer;
-    background-color:#a71930;
+    background-color:#263238;
     color:white;
     border-radius: 10px;
     border: none;
@@ -113,7 +113,7 @@ ul{
 }
 .buttons input[type=button]:hover{
     
-    color:#a71930;
+    color:#263238;
     background-color:white;
     
 }

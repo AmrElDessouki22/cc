@@ -71,4 +71,18 @@ app.post('/getnearbyhospital',async (req,res)=>
     }
 
 })
+app.get('/gethospitals/:id',async (req,res)=>
+{
+    try
+    {
+        const all_hospital = await hospital.findById(req.params.id)
+        
+
+        res.status(200).send(all_hospital)
+    }catch(e)
+    {
+        res.status(401).send('failed to get  Hospital')
+    }
+
+})
 module.exports = app

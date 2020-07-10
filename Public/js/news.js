@@ -1,13 +1,14 @@
 
 const des = document.getElementById('des')
 const id = document.getElementById('id')
+const getitem = document.getElementById('getitem')
 const title = document.getElementById('title')
 const resource = document.getElementById('resource')
 const hospital = document.getElementById('hospital')
 const imageurl = document.getElementById('imageurl')
 const statistics = document.getElementById('statistics')
 const news = document.getElementById('news')
-news.style["background-color"] = '#a71930'
+news.style["background-color"] = '#324148'
 news.style["color"]='white'
 const add = document.getElementById('add')
 const update = document.getElementById('update')
@@ -128,6 +129,25 @@ async function removenew()
         resource.value=''
         title.value=''
 
+    }
+
+}
+getitem.addEventListener('click',myitem)
+async function myitem()
+{
+    const response = await fetch(url+'getnews/'+id.value,{
+        method:'GET',
+        headers:{'Content-Type':'application/json'},
+    })
+    if(response.status ==200)
+    {
+        var json = await response.json()
+        imageurl.value=json.image_link
+        des.value =json.description
+        resource.value=json.resource
+        title.value=json.title
+
+        
     }
 
 }

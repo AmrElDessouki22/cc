@@ -7,7 +7,8 @@ const hospital = document.getElementById('hospital')
 const death = document.getElementById('death')
 const image = document.getElementById('image')
 const statistics = document.getElementById('statistics')
-statistics.style["background-color"] = '#a71930'
+const getitem = document.getElementById('getitem')
+statistics.style["background-color"] = '#324148'
 statistics.style["color"]='white'
 const add = document.getElementById('add')
 const update = document.getElementById('update')
@@ -126,6 +127,24 @@ async function removenew()
         alert('removed country done ')
       
 
+    }
+
+}
+getitem.addEventListener('click',myitem)
+async function myitem()
+{
+    const response = await fetch(url+'getstatistics/'+id.value,{
+        method:'GET',
+        headers:{'Content-Type':'application/json'},
+    })
+    if(response.status ==200)
+    {
+        var json = await response.json()
+        total.value=json.total
+        name.value =json.name
+        recovered.value=json.recovered
+        death.value=json.death
+        
     }
 
 }

@@ -4,9 +4,11 @@ const lat = document.getElementById('lat')
 const long = document.getElementById('long')
 const name = document.getElementById('name')
 const news = document.getElementById('news')
+const getitem = document.getElementById('getitem')
+
 const hospital = document.getElementById('hospital')
 const statics = document.getElementById('statics')
-hospital.style["background-color"] = '#a71930'
+hospital.style["background-color"] = '#324148'
 hospital.style["color"]='white'
 const image = document.getElementById('image')
 const add = document.getElementById('add')
@@ -135,6 +137,23 @@ async function removenew()
         lat.value=''
         long.value =''
         name.value=''
+    }
+
+}
+getitem.addEventListener('click',myitem)
+async function myitem()
+{
+    const response = await fetch(url+'gethospitals/'+id.value,{
+        method:'GET',
+        headers:{'Content-Type':'application/json'},
+    })
+    if(response.status ==200)
+    {
+        var json = await response.json()
+        lat.value=json.location.lat
+        long.value =json.location.lon
+        name.value=json.name
+        image.value = json.image_url== undefined ?'':json.image_url
     }
 
 }
